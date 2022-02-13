@@ -1,7 +1,5 @@
-const urlPrefix = process.env.URL_PREFIX ? '/' + process.env.URL_PREFIX : ''
+require('dotenv').config();
 
 module.exports = {
-  assetPrefix: urlPrefix,
-  basePath: urlPrefix,
-  trailingSlash: true,
+  assetPrefix: process.env.GITHUB_PAGES ? '/repository-name' : 'nextjs-blog',
 };
